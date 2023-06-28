@@ -2,12 +2,14 @@ package com.example.hellospring.service;
 
 import com.example.hellospring.domain.Member;
 import com.example.hellospring.repository.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
 
+@RequiredArgsConstructor
 public class MemberService {
-    private final MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemoryMemberRepository memberRepository;
 
     /**
      * 회원 가입
